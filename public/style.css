@@ -1,0 +1,362 @@
+/* get font Helvetica Neue */
+@import url("http://fonts.cdnfonts.com/css/helvetica-neue-9");
+
+/* 
+--------------------------------
+CSS REST
+-------------------------------- 
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 60.25%;
+}
+body {
+  font-size: 1.6rem;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f7fb;
+}
+
+/* 
+--------------------------------
+conponents
+-------------------------------- 
+*/
+.side-btn {
+  width: 3px;
+  background-color: #6e6767;
+  border-right: 1px solid black;
+}
+.mute,
+.soundMinus,
+.power,
+.soundPlus {
+  position: absolute;
+}
+.mute {
+  height: 30px;
+  top: 75px;
+  left: -8px;
+}
+.soundPlus {
+  height: 35px;
+  top: 123px;
+  left: -9px;
+}
+.soundMinus {
+  height: 35px;
+  top: 170px;
+  left: -9px;
+}
+.power {
+  height: 35px;
+  top: 105px;
+  right: -8px;
+  border-right: 0;
+  border-left: 1px solid black;
+}
+.carara {
+  height: 10px;
+  width: 10px;
+  border-left: 2px solid #353631;
+  background-color: #142958;
+  border-radius: 10px;
+  position: absolute;
+  left: 30%;
+}
+.speker {
+  height: 5px;
+  width: 40px;
+  background-color: #3c3c3c;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 2px solid rgb(68, 68, 68);
+}
+.speker div {
+  height: 3px;
+  width: 35px;
+  background-color: rgba(0, 0, 0, 0.144);
+}
+.home-btn {
+  height: 35px;
+  width: 35px;
+  border-radius: 30px;
+  border-left: 2px solid #4c4b50;
+  border-bottom: 2px solid #4c4b50;
+}
+
+/* 
+--------------------------------
+styleing frame
+-------------------------------- 
+*/
+#main_area {
+  height: 510px;
+  width: 245px;
+  border: 2px solid #080808;
+  border-radius: 40px;
+  box-shadow: rgba(50, 50, 93, 0.473) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.397) 0px 3px 7px -3px;
+}
+.frame-1 {
+  height: 100%;
+  width: 100%;
+  border: 4px solid #9a9b9f;
+  border-radius: 36px;
+  position: relative;
+  z-index: 1;
+}
+.frame-2 {
+  height: 100%;
+  width: 100%;
+  border-radius: 30px;
+  background-color: #080808;
+  padding: 4px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 50px 1fr 55px;
+  border-left: 1px solid #313131;
+}
+.frame-2 .cam-and-spk {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.frame-2 .home-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+--------------------------------
+styleing screen
+-------------------------------- 
+*/
+
+.screen {
+  /* background: url("/wellpaper.jpg");
+  background-size: contain; */
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15px 40px 1fr 40px;
+  position: relative;
+}
+
+/* styleing status bar  */
+.screen .status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #f7f7f7;
+}
+.status-bar .time {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 1.2rem;
+}
+.status-bar .network {
+  position: absolute;
+  left: 5px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.status-bar .network div {
+  height: 5px;
+  width: 5px;
+  border-radius: 5px;
+  background-color: #000;
+  margin: 0 1px;
+}
+.status-bar .network i {
+  margin-left: 3px;
+  font-size: 1.2rem;
+}
+.status-bar .battary-area {
+  position: absolute;
+  right: 5px;
+  font-family: "Helvetica 55 Roman", sans-serif;
+}
+.status-bar .battary-area .parcentage {
+  font-size: 1.2rem;
+}
+
+/* styleing header area */
+.header {
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 2px solid #dfdfdf;
+}
+.header .users-count,
+.header .title {
+  font-size: 1.5rem;
+  font-family: "Helvetica Neue", sans-serif;
+  text-align: center;
+}
+.get-theme,
+.peoples,
+.back {
+  position: absolute;
+  border: none;
+  background: none;
+  font-family: "Helvetica Neue", sans-serif;
+  color: #267add;
+}
+.header .get-theme {
+  left: 5px;
+}
+.header .peoples,
+.header .back {
+  right: 5px;
+}
+
+/* input area styleing  */
+.screen .input-area {
+  background-color: #f8f6f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+  border-top: 1px solid #dfdfdf;
+}
+.screen .input-area input {
+  width: 150px;
+  min-width: auto;
+  display: inline-block;
+  margin: 0 5px;
+  border: 1px solid #e3e1e4;
+  height: 28px;
+  border-radius: 3px;
+  padding-left: 3px;
+}
+input::placeholder {
+  color: #bfbdc0;
+  font-family: "Helvetica 55 Roman", sans-serif;
+}
+input:focus {
+  outline: none;
+}
+.screen .input-area .camara {
+  color: #908f95;
+  font-size: 2rem;
+}
+.screen .input-area .send {
+  color: #908f95;
+  font-size: 2rem;
+}
+#sendButton {
+  border: none;
+  background: transparent;
+}
+
+/* styleing msg area  */
+.screen .message_area {
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  overflow: auto;
+  padding-bottom: 10px;
+}
+.screen .message_area::-webkit-scrollbar,
+.list::-webkit-scrollbar {
+  display: none;
+}
+.message_area .notice {
+  text-align: center;
+  display: block;
+  color: #9a9b9f;
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+.message_area .left {
+  width: 65%;
+}
+.message_area .right {
+  width: 65%;
+  align-self: flex-end;
+}
+.msg-box {
+  font-family: "Helvetica 45 Light", sans-serif;
+  font-size: 1.2rem;
+  padding: 8px;
+  margin-top: 7px;
+  margin-left: 5px;
+  position: relative;
+  letter-spacing: 0.4px;
+}
+.message_area .right .msg-box {
+  background-color: #50d73c;
+  color: white;
+  border-radius: 10px 6px 2px 10px;
+  margin-right: 5px;
+}
+.message_area .left .msg-box {
+  background-color: #e6e5ea;
+  color: #27262b;
+  border-radius: 6px 10px 10px 2px;
+}
+.message_area .left:hover .time-date {
+  display: block;
+}
+.message_area .right:hover .time-date {
+  display: block;
+}
+.sender {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+.time-date {
+  font-size: 1.1rem;
+  color: #908f95;
+  margin: 0 5px;
+  display: block;
+  display: none;
+}
+.message_area .right .time-date {
+  text-align: right;
+}
+
+/* People area*/
+.people-area {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: none;
+}
+.people-area .header {
+  height: 40px;
+}
+.people-area .list {
+  overflow: auto;
+  height: 340px;
+}
+.people-area .list ul {
+  list-style-type: none;
+}
+.people-area .list li {
+  font-family: "Helvetica 55 Roman", sans-serif;
+  padding: 5px 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+  font-size: 1.4rem;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RealTime Chat Application</title>
+
+    <!-- font aweosme icons  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- ***** Additional Style Sheet *****  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ***** Main Screen start *****  -->
+    <main id="main_area">
+      <!--***** frame 1 start ***** -->
+      <div class="frame-1">
+        <!-- side button  -->
+        <div class="side-btn mute"></div>
+        <div class="side-btn soundPlus"></div>
+        <div class="side-btn soundMinus"></div>
+        <div class="side-btn power"></div>
+
+        <div class="frame-2">
+          <!-- camra and speaker area start  -->
+          <div class="cam-and-spk">
+            <div class="carara"></div>
+            <div class="speker"><div></div></div>
+          </div>
+          <!-- camra and speaker area start  -->
+
+          <!--***** screen start ***** -->
+          <div class="screen">
+            <!-- display people  -->
+            <div class="people-area">
+              <!-- status bar start  -->
+              <div class="status-bar">
+                <div class="network">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <i class="fa-solid fa-wifi"></i>
+                </div>
+                <span class="time">11:56 AM</span>
+                <div class="battary-area">
+                  <span class="parcentage">96%</span>
+                  <i class="fa-solid fa-battery-full"></i>
+                </div>
+              </div>
+              <!-- status bar end  -->
+
+              <!-- header area start  -->
+              <div class="header">
+                <h1 class="users-count">Peoples (10)</h1>
+                <button class="back">Back</button>
+              </div>
+              <!-- header area end  -->
+
+              <div class="list">
+                <ul class="users-list">
+                  <li>people 1</li>
+                  <li>people 2</li>
+                  <li>people 3</li>
+                </ul>
+              </div>
+            </div>
+            <!-- people area end  -->
+            <!-- status bar start  -->
+            <div class="status-bar">
+              <div class="network">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <i class="fa-solid fa-wifi"></i>
+              </div>
+              <span class="time">11:56 AM</span>
+              <div class="battary-area">
+                <span class="parcentage">96%</span>
+                <i class="fa-solid fa-battery-full"></i>
+              </div>
+            </div>
+            <!-- status bar end  -->
+
+            <!-- header area start  -->
+            <div class="header">
+              <button class="get-theme">
+                <i class="fa-solid fa-chevron-left"></i>
+                Theme
+              </button>
+              <h1 class="title">Chat App</h1>
+              <button class="peoples">Proples</button>
+            </div>
+            <!-- header area end  -->
+
+            <!-- message area start  -->
+            <div class="message_area">
+              <!-- data will come form server  -->
+            </div>
+            <!-- massage area end  -->
+
+            <!-- input area start  -->
+            <div class="input-area">
+              <form id="form">
+                <i class="fa-solid fa-camera camara"></i>
+                <input type="text" placeholder="Text Message" id="inputField" />
+                <button type="button" id="sendButton">
+                  <i class="fa-solid fa-paper-plane send"></i>
+                </button>
+              </form>
+            </div>
+            <!-- input area end  -->
+          </div>
+          <!--***** screen end ***** -->
+
+          <!-- home area start  -->
+          <div class="home-area">
+            <div class="home-btn"></div>
+          </div>
+        </div>
+        <!--***** frame 2 end ***** -->
+      </div>
+      <!--***** frame 1 end ***** -->
+    </main>
+    <!-- ***** Main Screen end *****  -->
+    <script src="socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
